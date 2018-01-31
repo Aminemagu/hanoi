@@ -6,8 +6,61 @@ import org.junit.Test;
 
 public class TourTest {
 
-	@Test
+	
 	public void test() {
+	// Les deux conditions sont vraies
+	public void TourTest1() {
+            Tour tour1 = new Tour();
+            Disque disque1 = new Disque(3);
+            tour.empiler(disque1);
+            Disque disque2 = new Disque(2);
+            tour.empiler(disque2);
+            Disque disque3 = new Disque (1);
+            boolean result = tour.empiler(disque3);
+            assertEquals(true, result);
+	}
+
+        //La 1ere Condition est vraie, la deuxieme condition est fausse
+        public void Tourtest2(){
+            Tour tour2 = new Tour();
+            Disque disque1 = new Disque(3);
+            tour.empiler(disque1);
+            Disque disque2 = new Disque(2);
+            tour.empiler(disque2);
+            Disque disque3 = new Disque (3);
+            boolean result = tour.empiler(disque3);
+            assertEquals(false, result);
+        }
+        
+        //La premiere Condition est fausse, La deuxieme condition est vraie
+        public void Tourtest3(){
+            Tour tour3 = nes Tour();
+            Disque disque1 = new Disque(4);
+            tour.empiler(disque1);
+            Disque disque2 = new Disque (3);
+            tour.empiler(disque2);
+            Dique disque3 = new Disque (2);
+            tour.empiler(disque3);
+            Disque disque4 = new Disque(1);
+            boolean result = tour.empiler(disque4);
+            assertEquals(false, result);
+        }
+        
+        //Les deux condition sont fausses
+        public void Tourtest4(){
+            Tour tour4 = new Tour();
+            Disque disque1 = new Disque(4);
+            tour.empiler(disque1);
+            Disque disque2 = new Disque(3);
+            tour.empiler(disque2);
+            Disque disque3 = new Disque(2);
+            tour.empiler(disque3);
+            Disque disque4 = new Disque(2);
+            boolean result = tour.empiler(disque4);
+            assertEquals(false, result);
+        }
+        
+}
 
 	}
 
